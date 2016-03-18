@@ -1,0 +1,5 @@
+ARG_ENABLE("callee", "enable callee support", "no");
+
+if (PHP_CALLEE != "no") {
+    EXTENSION("callee", "callee.c", PHP_EXTNAME_SHARED, "/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
+}
